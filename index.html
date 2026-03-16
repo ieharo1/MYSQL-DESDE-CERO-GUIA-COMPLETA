@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MySQL desde Cero - Guía Completa</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="container">
+                <div class="logo">
+                    <span class="logo-icon">🐬</span>
+                    <span class="logo-text">MySQL desde Cero</span>
+                </div>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#que-es">¿Qué es?</a></li>
+                    <li><a href="#arquitectura">Arquitectura</a></li>
+                    <li><a href="#temas">Temas</a></li>
+                    <li><a href="#ejemplos">Ejemplos</a></li>
+                </ul>
+                <button class="nav-toggle" id="navToggle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h1>MySQL desde Cero</h1>
+            <p class="hero-subtitle">Guía completa para aprender MySQL desde fundamentos hasta conceptos avanzados.</p>
+            <div class="hero-buttons">
+                <a href="#que-es" class="btn btn-primary">Comenzar</a>
+                <a href="#ejemplos" class="btn btn-secondary">Ver ejemplos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ¿Qué es MySQL? -->
+    <section id="que-es" class="section">
+        <div class="container">
+            <h2>¿Qué es MySQL?</h2>
+            <div class="content-grid">
+                <div class="content-card">
+                    <div class="card-icon">🗄️</div>
+                    <h3>Sistema de Gestión de Bases de Datos</h3>
+                    <p>MySQL es un sistema de gestión de bases de datos relacional de código abierto, uno de los más populares del mundo para aplicaciones web.</p>
+                </div>
+                <div class="content-card">
+                    <div class="card-icon">⚡</div>
+                    <h3>Para Qué Sirve</h3>
+                    <p>Se utiliza para almacenar y gestionar datos en aplicaciones web, sistemas empresariales, e-commerce y aplicaciones móviles.</p>
+                </div>
+                <div class="content-card">
+                    <div class="card-icon">🔧</div>
+                    <h3>Características Principales</h3>
+                    <p>Soporta transacciones ACID, stored procedures, triggers, vistas, replicación y clustering para alta disponibilidad.</p>
+                </div>
+            </div>
+
+            <div class="info-box">
+                <h4>💡 ¿Sabías qué?</h4>
+                <p>MySQL fue creado en 1995 por Michael Widenius y David Axmark. Su nombre proviene de la hija de Widenius, My. El símbolo del delfín se llama "Sakila".</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Arquitectura -->
+    <section id="arquitectura" class="section section-alt">
+        <div class="container">
+            <h2>Arquitectura de MySQL</h2>
+            <p class="section-intro">MySQL utiliza una arquitectura cliente-servidor con múltiples motores de almacenamiento intercambiables.</p>
+
+            <div class="architecture-diagram">
+                <div class="arch-layer">
+                    <h4>Cliente / Aplicación</h4>
+                    <p>MySQL Workbench, aplicaciones web, CLI</p>
+                </div>
+                <div class="arch-arrow">⬇️</div>
+                <div class="arch-layer">
+                    <h4>MySQL Server</h4>
+                    <p>Parser, Optimizer, Executor</p>
+                </div>
+                <div class="arch-arrow">⬇️</div>
+                <div class="arch-layer">
+                    <h4>Storage Engine</h4>
+                    <p>InnoDB, MyISAM, Memory, etc.</p>
+                </div>
+                <div class="arch-arrow">⬇️</div>
+                <div class="arch-layer">
+                    <h4>Datos Físicos</h4>
+                    <p>Archivos en disco, logs, buffers</p>
+                </div>
+            </div>
+
+            <div class="components-grid">
+                <div class="component-card">
+                    <h4>📊 Storage Engines</h4>
+                    <ul>
+                        <li>InnoDB - Transaccional, row-level locking</li>
+                        <li>MyISAM - Lectura rápida, sin transacciones</li>
+                        <li>Memory - Datos en RAM, muy rápido</li>
+                        <li>Archive - Para grandes volúmenes de datos</li>
+                    </ul>
+                </div>
+                <div class="component-card">
+                    <h4>💾 Componentes</h4>
+                    <ul>
+                        <li>Connection Pool - Gestión de conexiones</li>
+                        <li>Query Cache - Caché de consultas</li>
+                        <li>Buffer Pool - Caché de InnoDB</li>
+                        <li>Redo Log - Log de transacciones</li>
+                    </ul>
+                </div>
+                <div class="component-card">
+                    <h4>🔒 Características</h4>
+                    <ul>
+                        <li>ACID compliance - Transacciones seguras</li>
+                        <li>Foreign keys - Integridad referencial</li>
+                        <li>Replication - Réplica maestro-esclavo</li>
+                        <li>Partitioning - Particionamiento de tablas</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Temas -->
+    <section id="temas" class="section">
+        <div class="container">
+            <h2>Contenido del Curso</h2>
+            <div class="topics-grid">
+                <div class="topic-card" data-topic="1">
+                    <div class="topic-number">01</div>
+                    <h3>Introducción</h3>
+                    <p>Conceptos básicos de MySQL, historia y casos de uso en la industria.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="2">
+                    <div class="topic-number">02</div>
+                    <h3>Instalación</h3>
+                    <p>Instalación de MySQL Server y MySQL Workbench en diferentes sistemas operativos.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="3">
+                    <div class="topic-number">03</div>
+                    <h3>Conceptos básicos</h3>
+                    <p>Creación de bases de datos, tablas, tipos de datos y restricciones.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="4">
+                    <div class="topic-number">04</div>
+                    <h3>Ejemplos prácticos</h3>
+                    <p>Consultas SELECT, JOINs, subconsultas y funciones de agregación.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="5">
+                    <div class="topic-number">05</div>
+                    <h3>Buenas prácticas</h3>
+                    <p>Normalización, indexación y optimización de consultas con EXPLAIN.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="6">
+                    <div class="topic-number">06</div>
+                    <h3>Casos reales</h3>
+                    <p>Implementaciones en producción, replicación y backup estratégico.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+                <div class="topic-card" data-topic="7">
+                    <div class="topic-number">07</div>
+                    <h3>Proyecto final</h3>
+                    <p>Desarrollo de una base de datos completa para e-commerce.</p>
+                    <a href="#" class="topic-link">Ver tema →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Ejemplos -->
+    <section id="ejemplos" class="section section-alt">
+        <div class="container">
+            <h2>Ejemplos de Código</h2>
+            <div class="examples-container">
+                <div class="example-card">
+                    <h4>Crear Base de Datos</h4>
+                    <pre><code class="language-sql">CREATE DATABASE IF NOT EXISTS mi_tienda;
+USE mi_tienda;</code></pre>
+                </div>
+                <div class="example-card">
+                    <h4>Crear Tabla</h4>
+                    <pre><code class="language-sql">CREATE TABLE productos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    stock INT DEFAULT 0,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;</code></pre>
+                </div>
+                <div class="example-card">
+                    <h4>Consulta con JOIN</h4>
+                    <pre><code class="language-sql">SELECT p.nombre, c.nombre AS categoria
+FROM productos p
+INNER JOIN categorias c ON p.categoria_id = c.id
+WHERE p.stock > 0
+ORDER BY p.precio DESC;</code></pre>
+                </div>
+                <div class="example-card">
+                    <h4>Stored Procedure</h4>
+                    <pre><code class="language-sql">DELIMITER //
+CREATE PROCEDURE ObtenerProductos()
+BEGIN
+    SELECT * FROM productos;
+END //
+DELIMITER ;</code></pre>
+                </div>
+            </div>
+            <div class="text-center">
+                <a href="#" class="btn btn-primary">Ver más ejemplos</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>MySQL desde Cero</h4>
+                    <p>Guía educativa completa para aprender MySQL desde los fundamentos hasta conceptos avanzados.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces Rápidos</h4>
+                    <ul>
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#que-es">¿Qué es?</a></li>
+                        <li><a href="#temas">Temas</a></li>
+                        <li><a href="#ejemplos">Ejemplos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Recursos</h4>
+                    <ul>
+                        <li><a href="https://dev.mysql.com/doc/" target="_blank">Docs Oficiales</a></li>
+                        <li><a href="https://www.mysql.com/" target="_blank">Sitio Oficial</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>👨‍💻 Desarrollado por <strong>Isaac Esteban Haro Torres</strong></p>
+                <p class="developer-info">Ingeniero en Sistemas · Full Stack · Automatización · Data</p>
+                <div class="developer-contact">
+                    <p>📧 Email: <a href="mailto:zackharo1@gmail.com">zackharo1@gmail.com</a></p>
+                    <p>💻 GitHub: <a href="https://github.com/ieharo1" target="_blank">github.com/ieharo1</a></p>
+                </div>
+                <p class="copyright">© 2026 Isaac Esteban Haro Torres - Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
