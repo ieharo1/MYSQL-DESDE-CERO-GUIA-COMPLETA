@@ -142,43 +142,200 @@
                     <div class="topic-number">01</div>
                     <h3>Introducción</h3>
                     <p>Conceptos básicos de MySQL, historia y casos de uso en la industria.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema1-1" class="topic-link">Ver tema →</a>
                 </div>
                 <div class="topic-card" data-topic="2">
                     <div class="topic-number">02</div>
                     <h3>Instalación</h3>
                     <p>Instalación de MySQL Server y MySQL Workbench en diferentes sistemas operativos.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema1-2" class="topic-link">Ver tema →</a>
                 </div>
                 <div class="topic-card" data-topic="3">
                     <div class="topic-number">03</div>
                     <h3>Conceptos básicos</h3>
                     <p>Creación de bases de datos, tablas, tipos de datos y restricciones.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema1-3" class="topic-link">Ver tema →</a>
                 </div>
                 <div class="topic-card" data-topic="4">
                     <div class="topic-number">04</div>
                     <h3>Ejemplos prácticos</h3>
                     <p>Consultas SELECT, JOINs, subconsultas y funciones de agregación.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema2-1" class="topic-link">Ver tema →</a>
                 </div>
                 <div class="topic-card" data-topic="5">
                     <div class="topic-number">05</div>
                     <h3>Buenas prácticas</h3>
                     <p>Normalización, indexación y optimización de consultas con EXPLAIN.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema2-2" class="topic-link">Ver tema →</a>
                 </div>
                 <div class="topic-card" data-topic="6">
                     <div class="topic-number">06</div>
                     <h3>Casos reales</h3>
                     <p>Implementaciones en producción, replicación y backup estratégico.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema3-1" class="topic-link">Ver tema →</a>
                 </div>
                 <div class="topic-card" data-topic="7">
                     <div class="topic-number">07</div>
                     <h3>Proyecto final</h3>
                     <p>Desarrollo de una base de datos completa para e-commerce.</p>
-                    <a href="#" class="topic-link">Ver tema →</a>
+                    <a href="#tema3-2" class="topic-link">Ver tema →</a>
+                </div>
+            </div>
+
+            <!-- Contenido Detallado de Temas -->
+            <div class="topic-content-container">
+                <div class="content-detail" id="tema1-1">
+                    <h3>🐬 Introducción a MySQL</h3>
+                    <div class="content-body">
+                        <p><strong>MySQL</strong> es un sistema de gestión de bases de datos relacional de código abierto, uno de los más populares del mundo para aplicaciones web.</p>
+                        <h4>Historia:</h4>
+                        <p>MySQL fue creado en 1995 por Michael Widenius y David Axmark. Su nombre proviene de la hija de Widenius, My. El símbolo del delfín se llama "Sakila".</p>
+                        <h4>Características Principales:</h4>
+                        <ul>
+                            <li><strong>Open Source:</strong> Código abierto bajo licencia GPL</li>
+                            <li><strong>Multiplataforma:</strong> Windows, Linux, macOS</li>
+                            <li><strong>ACID:</strong> Transacciones seguras con InnoDB</li>
+                            <li><strong>Replicación:</strong> Maestro-esclavo y clustering</li>
+                        </ul>
+                        <div class="info-box">
+                            <strong>💡 ¿Sabías qué?</strong>
+                            <p>MySQL es usado por empresas como Facebook, Google, YouTube y Twitter para manejar grandes volúmenes de datos.</p>
+                        </div>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema1-2">
+                    <h3>🔧 Instalación de MySQL</h3>
+                    <div class="content-body">
+                        <h4>En Windows:</h4>
+                        <ol>
+                            <li>Descarga MySQL Installer desde mysql.com</li>
+                            <li>Ejecuta el instalador</li>
+                            <li>Selecciona "MySQL Server" y "MySQL Workbench"</li>
+                            <li>Configura la contraseña de root</li>
+                        </ol>
+                        <h4>En Linux (Ubuntu/Debian):</h4>
+                        <pre><code>sudo apt update
+sudo apt install mysql-server
+sudo mysql_secure_installation</code></pre>
+                        <h4>En macOS:</h4>
+                        <pre><code>brew install mysql
+brew services start mysql</code></pre>
+                        <h4>Verificar instalación:</h4>
+                        <pre><code>mysql --version
+mysql -u root -p</code></pre>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema1-3">
+                    <h3>📦 Conceptos Básicos</h3>
+                    <div class="content-body">
+                        <h4>Crear Base de Datos:</h4>
+                        <pre><code>CREATE DATABASE IF NOT EXISTS mi_tienda;
+USE mi_tienda;</code></pre>
+                        <h4>Crear Tabla:</h4>
+                        <pre><code>CREATE TABLE productos (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    nombre VARCHAR(100) NOT NULL,
+    precio DECIMAL(10,2) NOT NULL,
+    stock INT DEFAULT 0,
+    fecha_creacion TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB;</code></pre>
+                        <h4>Tipos de Datos Comunes:</h4>
+                        <ul>
+                            <li><strong>INT:</strong> Números enteros</li>
+                            <li><strong>VARCHAR(n):</strong> Cadenas de texto</li>
+                            <li><strong>DECIMAL(m,n):</strong> Números decimales</li>
+                            <li><strong>DATE/TIMESTAMP:</strong> Fechas</li>
+                        </ul>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema2-1">
+                    <h3>💻 Consultas SQL</h3>
+                    <div class="content-body">
+                        <h4>SELECT Básico:</h4>
+                        <pre><code>SELECT * FROM productos;
+SELECT nombre, precio FROM productos WHERE stock > 0;
+SELECT COUNT(*) FROM productos;</code></pre>
+                        <h4>JOINs:</h4>
+                        <pre><code>-- INNER JOIN
+SELECT p.nombre, c.nombre AS categoria
+FROM productos p
+INNER JOIN categorias c ON p.categoria_id = c.id;
+
+-- LEFT JOIN
+SELECT p.nombre, c.nombre AS categoria
+FROM productos p
+LEFT JOIN categorias c ON p.categoria_id = c.id;</code></pre>
+                        <h4>Agregaciones:</h4>
+                        <pre><code>SELECT categoria_id, AVG(precio) as promedio
+FROM productos
+GROUP BY categoria_id
+HAVING promedio > 100;</code></pre>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema2-2">
+                    <h3>✅ Buenas Prácticas</h3>
+                    <div class="content-body">
+                        <h4>Normalización:</h4>
+                        <ul>
+                            <li><strong>1FN:</strong> Valores atómicos, sin repetición</li>
+                            <li><strong>2FN:</strong> Dependencia completa de la PK</li>
+                            <li><strong>3FN:</strong> Sin dependencias transitivas</li>
+                        </ul>
+                        <h4>Índices:</h4>
+                        <pre><code>-- Crear índice
+CREATE INDEX idx_nombre ON productos(nombre);
+
+-- Ver índices
+SHOW INDEX FROM productos;</code></pre>
+                        <h4>EXPLAIN:</h4>
+                        <pre><code>EXPLAIN SELECT * FROM productos WHERE nombre = 'X';</code></pre>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema3-1">
+                    <h3>🚀 Casos Reales</h3>
+                    <div class="content-body">
+                        <h4>Replicación:</h4>
+                        <p>Configura un maestro para escrituras y esclavos para lecturas.</p>
+                        <h4>Backup Estratégico:</h4>
+                        <pre><code># Backup completo
+mysqldump -u root -p mi_tienda > backup.sql
+
+# Restaurar
+mysql -u root -p mi_tienda < backup.sql</code></pre>
+                        <h4>Connection Pooling:</h4>
+                        <p>Usa pools de conexión en tu aplicación para mejor rendimiento.</p>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
+                </div>
+
+                <div class="content-detail" id="tema3-2">
+                    <h3>📋 Proyecto Final</h3>
+                    <div class="content-body">
+                        <p>Desarrolla una base de datos completa para e-commerce:</p>
+                        <ol>
+                            <li>Diseñar modelo entidad-relación</li>
+                            <li>Crear tablas normalizadas</li>
+                            <li>Implementar stored procedures</li>
+                            <li>Configurar índices estratégicos</li>
+                            <li>Crear vistas para reportes</li>
+                            <li>Implementar backup automático</li>
+                        </ol>
+                        <div class="info-box">
+                            <strong>💡 Proyecto sugerido:</strong>
+                            <p>Crea una base de datos para tienda online con usuarios, productos, pedidos y pagos.</p>
+                        </div>
+                    </div>
+                    <a href="#temas" class="btn btn-back">← Volver a temas</a>
                 </div>
             </div>
         </div>
